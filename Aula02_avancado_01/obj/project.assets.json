@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02\\Aula02.csproj",
-      "projectName": "Aula02",
-      "projectPath": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02\\Aula02.csproj",
+      "projectUniqueName": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02_avancado_01\\Aula02_avancado_01.csproj",
+      "projectName": "Aula02_avancado_01",
+      "projectPath": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02_avancado_01\\Aula02_avancado_01.csproj",
       "packagesPath": "C:\\Users\\mec04\\.nuget\\packages\\",
-      "outputPath": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02\\obj\\",
+      "outputPath": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02_avancado_01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mec04\\AppData\\Roaming\\NuGet\\NuGet.Config",

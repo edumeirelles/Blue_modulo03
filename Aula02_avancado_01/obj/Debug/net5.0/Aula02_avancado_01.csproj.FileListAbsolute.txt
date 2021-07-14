@@ -1,0 +1,16 @@
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\bin\Debug\net5.0\Aula02_avancado_01.exe
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\bin\Debug\net5.0\Aula02_avancado_01.deps.json
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\bin\Debug\net5.0\Aula02_avancado_01.runtimeconfig.json
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\bin\Debug\net5.0\Aula02_avancado_01.runtimeconfig.dev.json
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\bin\Debug\net5.0\Aula02_avancado_01.dll
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\bin\Debug\net5.0\ref\Aula02_avancado_01.dll
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\bin\Debug\net5.0\Aula02_avancado_01.pdb
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\obj\Debug\net5.0\Aula02_avancado_01.csproj.AssemblyReference.cache
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\obj\Debug\net5.0\Aula02_avancado_01.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\obj\Debug\net5.0\Aula02_avancado_01.AssemblyInfoInputs.cache
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\obj\Debug\net5.0\Aula02_avancado_01.AssemblyInfo.cs
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\obj\Debug\net5.0\Aula02_avancado_01.csproj.CoreCompileInputs.cache
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\obj\Debug\net5.0\Aula02_avancado_01.dll
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\obj\Debug\net5.0\ref\Aula02_avancado_01.dll
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\obj\Debug\net5.0\Aula02_avancado_01.pdb
+D:\OneDrive\Blue\Repositórios\Blue_modulo03\Aula02_avancado_01\obj\Debug\net5.0\Aula02_avancado_01.genruntimeconfig.cache
