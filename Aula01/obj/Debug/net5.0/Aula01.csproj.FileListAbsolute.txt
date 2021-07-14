@@ -1,0 +1,16 @@
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\bin\Debug\net5.0\Aula01.exe
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\bin\Debug\net5.0\Aula01.deps.json
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\bin\Debug\net5.0\Aula01.runtimeconfig.json
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\bin\Debug\net5.0\Aula01.runtimeconfig.dev.json
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\bin\Debug\net5.0\Aula01.dll
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\bin\Debug\net5.0\ref\Aula01.dll
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\bin\Debug\net5.0\Aula01.pdb
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\obj\Debug\net5.0\Aula01.csproj.AssemblyReference.cache
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\obj\Debug\net5.0\Aula01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\obj\Debug\net5.0\Aula01.AssemblyInfoInputs.cache
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\obj\Debug\net5.0\Aula01.AssemblyInfo.cs
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\obj\Debug\net5.0\Aula01.csproj.CoreCompileInputs.cache
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\obj\Debug\net5.0\Aula01.dll
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\obj\Debug\net5.0\ref\Aula01.dll
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\obj\Debug\net5.0\Aula01.pdb
+C:\Users\mec04\OneDrive\Área de Trabalho\Projetos\Aula01\obj\Debug\net5.0\Aula01.genruntimeconfig.cache
