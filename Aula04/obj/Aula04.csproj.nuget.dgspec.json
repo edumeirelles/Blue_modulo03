@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02\\Aula02.csproj": {}
+    "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula04\\Aula04.csproj": {}
   },
   "projects": {
-    "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02\\Aula02.csproj": {
+    "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula04\\Aula04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02\\Aula02.csproj",
-        "projectName": "Aula02",
-        "projectPath": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02\\Aula02.csproj",
+        "projectUniqueName": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula04\\Aula04.csproj",
+        "projectName": "Aula04",
+        "projectPath": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula04\\Aula04.csproj",
         "packagesPath": "C:\\Users\\mec04\\.nuget\\packages\\",
-        "outputPath": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula02\\obj\\",
+        "outputPath": "D:\\OneDrive\\Blue\\Repositórios\\Blue_modulo03\\Aula04\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mec04\\AppData\\Roaming\\NuGet\\NuGet.Config",
