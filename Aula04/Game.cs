@@ -11,6 +11,7 @@ namespace Aula04
         Hero hero;
         public void Start()
         {
+            Console.WriteLine("\n\n###### Game Aula04 ######\n\n");
             Console.WriteLine("Digite o nome do seu Heroi:");
             hero = new(Console.ReadLine());
             Disclaimer();
@@ -26,18 +27,20 @@ namespace Aula04
         }
         void Disclaimer()
         {
-            Console.WriteLine($"O nome do seu heroi é {hero.Name}!");
-            Console.WriteLine($"Experiência: {hero.Xp}\nNível: {hero.Level}\nVida: {hero.Life}\nAtaque: {hero.Atk}");
+            
+            Console.WriteLine($"\n\n*=*=*=*=*=*=*\nO nome do seu heroi é {hero.Name}!\n*=*=*=*=*=*=*");
+            Console.WriteLine($"\n\nExperiência: {hero.Xp}\nNível: {hero.Level}\nVida: {hero.Life}\nAtaque: {hero.Atk}");
         }
 
         void EnemyChoice()
         {
             Monster monster;
 
-            Console.WriteLine("Escolha o seu inimigo:");
+            Console.WriteLine("Escolha o seu inimigo:\n");
             Console.WriteLine("1 - Orc");
             Console.WriteLine("2 - Troll");
-            Console.WriteLine("3 - Goblin");
+            Console.WriteLine("3 - Goblin\n");
+            Console.Write("Opção: ");
 
             string op_1 = Console.ReadLine();
 
@@ -62,19 +65,16 @@ namespace Aula04
             else
                 Console.WriteLine("Opção Inválida");
 
-            
-
             void Action()
             {
-                Console.WriteLine($"Você escolheu o {monster.Name} como inimigo!");
-                Console.WriteLine($"Seus atributos são:\nVida: {monster.Life}\nAtaque: {monster.Atk}\nExperiência: {monster.Xp}");
+                Console.WriteLine($"\nVocê escolheu o {monster.Name} como inimigo!");
+                Console.WriteLine($"\nSeus atributos são:\nVida: {monster.Life}\nAtaque: {monster.Atk}\nExperiência: {monster.Xp}");
                 Pause();
                 Console.WriteLine("O que você deseja fazer?");
                 Console.WriteLine("1 - Enfrentar!!!");
-                Console.WriteLine("2 - Fugir...");
-
-                string op_2 = Console.ReadLine();
-                switch (op_2)
+                Console.WriteLine("2 - Fugir...\n");
+                Console.Write("Opção: ");
+                switch (Console.ReadLine())
                 {
                     case "1":
                         Fight();
@@ -84,17 +84,17 @@ namespace Aula04
                         break;
                 }
             }
-
             void Fight()
             {
                 hero.Life -= monster.Atk;
                 monster.Life -= hero.Atk;
 
-                Console.WriteLine(hero.Life);
-                Console.WriteLine(monster.Life);
-
                 if (hero.Life <= 0)
+                {
+                    Console.WriteLine("Você foi derrotado!!!\n\n\n\nGAME OVER.");
                     return;
+                }
+                    
                 else
                 {
                     if (monster.Life <= 0)
