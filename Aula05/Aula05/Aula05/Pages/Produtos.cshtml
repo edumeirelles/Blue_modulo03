@@ -1,0 +1,13 @@
+﻿@page
+@model Aula05.Pages.ProdutosModel
+@{
+}
+
+Página dos produtos!
+<br />
+Lista de Produtos:
+@foreach (var produto in Model.produtos)
+{
+    <br />
+    @produto
+}
