@@ -1,0 +1,22 @@
+﻿@page
+@model SalaDeAula.Pages.Alunos.CreateModel
+@{
+}
+<h2>Criar novo aluno</h2>
+<br />
+
+<form>
+    <div>
+        <label for="Nome" class="form-label">Nome</label>
+        <input class="form-control" type="text" placeholder="Nome">
+    </div>
+    <br />
+    <div>
+        <label for="DataNasc" class="form-label">Data de Nascimento</label>
+        <input class="form-control" type="text" placeholder="Data de Nascimento">
+    </div>
+    <br />
+    <div>
+        <a asp-page="/Alunos/Sucesso" class="btn btn-primary">Criar novo aluno</a>
+    </div>
+</form>
