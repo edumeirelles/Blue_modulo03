@@ -1,0 +1,18 @@
+﻿@page
+@model Aula06.Pages.Produtos.IndexModel
+@using Aula06.Models
+@{
+}
+
+<p>Esta é a Página inical dos produtos</p>
+
+@foreach (Product prod in Model.produtos)
+            {
+<div class="produtos">
+    @prod.Nome;
+    @prod.Preco;
+    @prod.Descricao;
+</div>
+               
+            }
+
