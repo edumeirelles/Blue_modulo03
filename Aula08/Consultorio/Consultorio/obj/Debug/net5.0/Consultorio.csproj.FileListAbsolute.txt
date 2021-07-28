@@ -359,3 +359,5 @@ D:\OneDrive\Blue\Repositórios\Blue_modulo3\Aula08\Consultorio\Consultorio\obj\D
 D:\OneDrive\Blue\Repositórios\Blue_modulo3\Aula08\Consultorio\Consultorio\obj\Debug\net5.0\Razor\Views\Home\Blue.cshtml.g.cs
 D:\OneDrive\Blue\Repositórios\Blue_modulo3\Aula08\Consultorio\Consultorio\obj\Debug\net5.0\Razor\Views\Paciente\Index.cshtml.g.cs
 D:\OneDrive\Blue\Repositórios\Blue_modulo3\Aula08\Consultorio\Consultorio\obj\Debug\net5.0\Razor\Views\Monstros\Index.cshtml.g.cs
+D:\OneDrive\Blue\Repositórios\Blue_modulo3\Aula08\Consultorio\Consultorio\obj\Debug\net5.0\Razor\Views\Paciente\Create.cshtml.g.cs
+D:\OneDrive\Blue\Repositórios\Blue_modulo3\Aula08\Consultorio\Consultorio\obj\Debug\net5.0\Razor\Views\Paciente\Sucesso.cshtml.g.cs

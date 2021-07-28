@@ -1,14 +1,27 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-Página de Pacientes
+﻿@model List<Paciente>
+
+<h2>Lista de pacientes</h2>
+<a class="btn btn-primary" asp-controller="Paciente" asp-action="Create">Criar um novo paciente!</a>
 <br /><br />
 
-@foreach (Paciente paciente in ViewBag.listaPacientes)
-            {
-<p>ID: @paciente.Id</p>
-<p>Nome: @paciente.Name</p>
-
-            }
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(Model => Model.First().Id)</th>
+            <th>@Html.DisplayNameFor(Model => Model.First().Name)</th>
+            <th>@Html.DisplayNameFor(Model => Model.First().DataNasc)</th>
+            <th>@Html.DisplayNameFor(Model => Model.First().Descricao)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Paciente paciente in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(Model => paciente.Id)</td>
+            <td>@Html.DisplayFor(Model => paciente.Name)</td>
+            <td>@Html.DisplayFor(Model => paciente.DataNasc)</td>
+            <td>@Html.DisplayFor(Model => paciente.Descricao)</td>
+        </tr>
+        }
+    </tbody>
+</table>
