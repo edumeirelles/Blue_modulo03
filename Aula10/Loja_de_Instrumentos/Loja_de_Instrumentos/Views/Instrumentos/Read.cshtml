@@ -1,0 +1,9 @@
+﻿@model Instrumento
+
+<h2>@Model.Brand @Model.Model</h2>
+
+<img src="@Model.Link" alt="Alternate Text" style="height:400px"/>
+<p>@Model.Description</p>
+<h3>@Model.Price</h3>
+
+<a class="btn btn-primary" asp-controller="Instrumentos" asp-action="Index">Voltar</a>

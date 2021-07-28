@@ -1,0 +1,54 @@
+﻿@model List<Instrumento>
+
+<h2>Lista de Instrumentos</h2>
+<a class="btn btn-primary" asp-controller="Instrumentos" asp-action="Create">Criar um novo Instrumento!</a>
+<br />
+<br />
+
+<form>
+    <div class="input-group mb-3" style="width: 50%">
+        <input type="text" name="search" class="form-control" placeholder="Buscar" aria-label="Buscar ID" aria-describedby="button-addon2">
+        <input type="submit" class="btn btn-outline-secondary" id="button-addon2" value="Buscar!" />
+    </div>
+</form>
+
+@if (ViewBag.msg != "")
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.msg
+    </div>
+}
+@if (!ViewBag.order)
+{
+ <a class="btn btn-primary" asp-controller="Instrumentos" asp-action="Order">Ordenar por Modelo</a>
+}
+else
+{ <a class="btn btn-primary" asp-controller="Instrumentos" asp-action="Index">Retornar Ordenação Original</a>}
+<br /><br />
+
+<div class="row">
+    @foreach (Instrumento instrument in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="@Html.DisplayFor(Model => instrument.Link)" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(Model => instrument.Brand) @Html.DisplayFor(Model => instrument.Model)</h5>
+                <p class="card-text">@Html.DisplayFor(Model => instrument.Type)</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">@Html.DisplayFor(Model => instrument.Description)</li>
+                <li class="list-group-item">Preço: R$ @Html.DisplayFor(Model => instrument.Price)</li>
+            </ul>
+            <div class="card-body">
+                <a asp-controller="Instrumentos" asp-action="Read" asp-route-id="@instrument.Id" class="card-link">Detalhes</a>
+                <a asp-controller="Instrumentos" asp-action="Update" asp-route-id="@instrument.Id" class="card-link">Editar</a>
+                <a asp-controller="Instrumentos" asp-action="Confirm" asp-route-id="@instrument.Id" class="card-link">Apagar</a>
+            </div>
+        </div>
+    }
+</div>
+
+
+<p>Total de Instrumentos cadastrados: @ViewBag.total</p>
+<p>Instrumento mais caro: @ViewBag.maxprice</p>
+<p>Valor de todos os instrumentos somados: R$ @ViewBag.sum</p>
