@@ -19,14 +19,21 @@
     </div>
 }
 @if (!ViewBag.order)
-{
- <a class="btn btn-primary" asp-controller="Instrumentos" asp-action="Order">Ordenar por Modelo</a>
-}
-else
-{ <a class="btn btn-primary" asp-controller="Instrumentos" asp-action="Index">Retornar Ordenação Original</a>}
+    {
+     <a class="btn btn-primary" href="?order=true">Ordenar por Modelo</a>
+    }
+    else
+    { <a class="btn btn-primary" asp-controller="Instrumentos" asp-action="Index">Retornar Ordenação Original</a>}
+    <br /><br />
+
+<a class="btn btn-primary" href="?type=guitarra">Guitarras</a>
+<a class="btn btn-primary" href="?type=violao">Violões</a>
+<a class="btn btn-primary" href="?type=bateria">Baterias</a>
 <br /><br />
 
+
 <div class="row">
+
     @foreach (Instrumento instrument in Model)
     {
         <div class="card" style="width: 18rem;">
@@ -40,7 +47,7 @@ else
                 <li class="list-group-item">Preço: R$ @Html.DisplayFor(Model => instrument.Price)</li>
             </ul>
             <div class="card-body">
-                <a asp-controller="Instrumentos" asp-action="Read" asp-route-id="@instrument.Id" class="card-link">Detalhes</a>
+                <a asp-controller="Instrumentos" asp-action="Read" asp-route-type="@instrument.Type" asp-route-id="@instrument.Id" class="card-link">Detalhes</a>
                 <a asp-controller="Instrumentos" asp-action="Update" asp-route-id="@instrument.Id" class="card-link">Editar</a>
                 <a asp-controller="Instrumentos" asp-action="Confirm" asp-route-id="@instrument.Id" class="card-link">Apagar</a>
             </div>
