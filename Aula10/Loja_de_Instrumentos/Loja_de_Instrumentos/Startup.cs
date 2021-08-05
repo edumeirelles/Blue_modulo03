@@ -31,6 +31,7 @@ namespace Loja_de_Instrumentos
             services.AddDbContext<LojaDeInstrumentosContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("CSLojaDeInstrumentos")));
 
+            services.AddTransient<IInstrumentosService, InstrumentosSQLService>();
             services.AddTransient<InstrumentosStaticService>();
             services.AddTransient<InstrumentosSQLService>();
         }

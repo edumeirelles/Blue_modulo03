@@ -13,9 +13,7 @@ namespace Loja_de_Instrumentos.Data
         {
                 
         }
-        public DbSet<Guitarra> Guitarra { get; set; }
-        public DbSet<Violao> Violao { get; set; }
-        public DbSet<Bateria> Bateria { get; set; }
-
+        public DbSet<Instrumento> Instrumento { get; set; }
+      
     }
 }

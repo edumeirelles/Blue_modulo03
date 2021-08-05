@@ -6,25 +6,33 @@ using System.Threading.Tasks;
 
 namespace Loja_de_Instrumentos.Models
 {
-    public abstract class Instrumento
+    public class Instrumento
     {
-        public Instrumento(string Brand, string Model)
-        {
-            this.Brand = Brand;
-            this.Model = Model; 
-        }
+        
         [Display(Name = "#")]
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Tipo")]
-        public virtual string Type { get => "Instrumento"; }
+        public string Type { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Marca")]
         public string Brand { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Modelo")]
         public string Model { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Preço")]
         public double Price { get ; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Descrição")]
         public string Description { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Link da imagem")]
         public string Link { get; set; }
     }
