@@ -26,7 +26,7 @@ namespace Loja_de_Instrumentos.Models
 
         [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Preço")]
-        public double Price { get ; set; }
+        public double? Price { get ; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Descrição")]
@@ -35,5 +35,6 @@ namespace Loja_de_Instrumentos.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Link da imagem")]
         public string Link { get; set; }
+        public List<Categoria> Cordas { get; set; }
     }
 }

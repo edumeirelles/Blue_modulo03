@@ -6,3 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.PublishSingleFile = 
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = Loja_de_Instrumentos
+build_property.ProjectDir = D:\OneDrive\Blue\Repositórios\Blue_modulo3\Aula10\Loja_de_Instrumentos\Loja_de_Instrumentos\

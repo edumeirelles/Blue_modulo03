@@ -32,6 +32,7 @@ namespace Loja_de_Instrumentos
                 options.UseSqlServer(Configuration.GetConnectionString("CSLojaDeInstrumentos")));
 
             services.AddTransient<IInstrumentosService, InstrumentosSQLService>();
+            services.AddTransient<ICategoriaService, CategoriaService>();
             services.AddTransient<InstrumentosStaticService>();
             services.AddTransient<InstrumentosSQLService>();
         }
@@ -50,6 +51,7 @@ namespace Loja_de_Instrumentos
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();

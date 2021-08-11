@@ -8,6 +8,10 @@
 <form>
     <div class="input-group mb-3" style="width: 50%">
         <input type="text" name="search" class="form-control" placeholder="Buscar" aria-label="Buscar ID" aria-describedby="button-addon2">
+        <select name="service" class="form-control">
+            <option value="sql" selected>Dados SQL</option>
+            <option value="static">Dados Static</option>
+        </select>
         <input type="submit" class="btn btn-outline-secondary" id="button-addon2" value="Buscar!" />
     </div>
 </form>
@@ -29,6 +33,7 @@
 <a class="btn btn-primary" href="?type=Guitarra">Guitarras</a>
 <a class="btn btn-primary" href="?type=Violão">Violões</a>
 <a class="btn btn-primary" href="?type=Bateria">Baterias</a>
+<a class="btn btn-primary" href="?type=Saxofone">Saxofones</a>
 <br /><br />
 
 
@@ -47,9 +52,17 @@
                 <li class="list-group-item">Preço: R$ @Html.DisplayFor(Model => instrument.Price)</li>
             </ul>
             <div class="card-footer">
-                <a asp-controller="Instrumentos" asp-action="Read" asp-route-id="@instrument.Id" class="card-link">Detalhes</a>
-                <a asp-controller="Instrumentos" asp-action="Update" asp-route-id="@instrument.Id" class="card-link">Editar</a>
-                <a asp-controller="Instrumentos" asp-action="Confirm" asp-route-id="@instrument.Id" class="card-link">Apagar</a>
+                @if (ViewBag.source == "sql")
+                {
+                    <a asp-controller="Instrumentos" asp-action="Read" asp-route-id="@instrument.Id" class="card-link">Detalhes</a>
+                    <a asp-controller="Instrumentos" asp-action="Update" asp-route-id="@instrument.Id" class="card-link">Editar</a>
+                    <a asp-controller="Instrumentos" asp-action="Confirm" asp-route-id="@instrument.Id" class="card-link">Apagar</a>
+                }
+                else
+                {
+                    <p> Ações indisponíveis para modo Static</p>
+                }
+
             </div>
         </div>
     }

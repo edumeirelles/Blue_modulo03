@@ -16,22 +16,10 @@ namespace Loja_de_Instrumentos.Services
         }
         public List<Instrumento> GetAll(string search = null, string type = null, bool order = false)
         {
-
-            if (type == "Guitarra")
-            {
-                var guitarra = GetInstruments().FindAll(x => x.Type == type);
-                return guitarra;
-            }
-            else if (type == "Violão")
-            {
-                var violao = GetInstruments().FindAll(x => x.Type == type);
-                return violao;
-            }
-            else if (type == "Bateria")
-            {
-                var bateria = GetInstruments().FindAll(x => x.Type == type);
-                return bateria;
-            }
+            var types = GetInstruments().FindAll(x => x.Type == type);
+       
+            if (type != null)
+                return types;
             else
             {
                 if (order)
@@ -61,8 +49,6 @@ namespace Loja_de_Instrumentos.Services
         }
         public bool Update(Instrumento instrumentoUpdate)
         {
-            //var instrumentoFound = GetInstruments().FirstOrDefault(x => x.Id == instrumentoUpdate.Id);
-            //if (instrumentoFound == null) return false;
             _context.Instrumento.Update(instrumentoUpdate);
             _context.SaveChanges();
             return true;

@@ -14,6 +14,7 @@ namespace Loja_de_Instrumentos.Data
                 
         }
         public DbSet<Instrumento> Instrumento { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
       
     }
 }

@@ -22,6 +22,7 @@ namespace Loja_de_Instrumentos.Data
                 {
                     context.Instrumento.Add(new Instrumento()
                     {
+                        Type = "Guitarra",
                         Brand = "Fender",
                         Model = "Stratocaster",
                         Description = "A Fender Stratocaster é um modelo de guitarra elétrica desenhada por Leo Fender, " +
@@ -31,6 +32,7 @@ namespace Loja_de_Instrumentos.Data
                     });
                     context.Instrumento.Add(new Instrumento()
                     {
+                        Type = "Guitarra",
                         Brand = "Gibson",
                         Model = "SG",
                         Description = "Gibson SG é um dos mais conhecidos modelo de guitarra " +
@@ -40,6 +42,7 @@ namespace Loja_de_Instrumentos.Data
                     });
                     context.Instrumento.Add(new Instrumento()
                     {
+                        Type = "Violão",
                         Brand = "Martin",
                         Model = "DJR2E",
                         Description = "A C.F. Martin & Company é uma fabricante de violões dos Estados Unidos, estabelecida" +
@@ -49,6 +52,7 @@ namespace Loja_de_Instrumentos.Data
                     });
                     context.Instrumento.Add(new Instrumento()
                     {
+                        Type = "Violão",
                         Brand = "Epiphone",
                         Model = "DR-100",
                         Description = "The DR-100 features chrome hardware, a 25.5' scale, 1.68' nut width, set mahogany neck with dot inlays, mahogany body and select spruce top.",
@@ -57,6 +61,7 @@ namespace Loja_de_Instrumentos.Data
                     });
                     context.Instrumento.Add(new Instrumento()
                     {
+                        Type = "Guitarra",
                         Brand = "Gibson",
                         Model = "Les Paul",
                         Description = "Gibson Les Paul é uma guitarra de corpo sólido que começou a ser vendida em 1952.",
@@ -65,11 +70,45 @@ namespace Loja_de_Instrumentos.Data
                     });
                     context.Instrumento.Add(new Instrumento()
                     {
+                        Type = "Bateria",
                         Brand = "Pearl",
                         Model = "EXPORT EXX725S",
                         Description = "As lendas de amanhã tocam com a Pearl Export hoje. A Export Series agora incorpora a tecnologia de suspensão Pearl's S.S.T., montagem de tom Opti-Loc e acabamento Grindstone Sparkle.",
                         Price = 5199.99,
                         Link = "https://x5music.vteximg.com.br/arquivos/ids/170212-1920-1920/EXX725S-708.jpg"
+                    });
+                }
+                if (!context.Categoria.Any())
+                {
+                    context.Categoria.Add(new Categoria()
+                    {
+                        InstrumentoCategoria = "Cordas",
+                        InstrumentoId = 1
+                    });
+                    context.Categoria.Add(new Categoria()
+                    {
+                        InstrumentoCategoria = "Cordas",
+                        InstrumentoId = 2
+                    });
+                    context.Categoria.Add(new Categoria()
+                    {
+                        InstrumentoCategoria = "Cordas",
+                        InstrumentoId = 3
+                    });
+                    context.Categoria.Add(new Categoria()
+                    {
+                        InstrumentoCategoria = "Cordas",
+                        InstrumentoId = 4
+                    });
+                    context.Categoria.Add(new Categoria()
+                    {
+                        InstrumentoCategoria = "Cordas",
+                        InstrumentoId = 5
+                    });
+                    context.Categoria.Add(new Categoria()
+                    {
+                        InstrumentoCategoria = "Bateria",
+                        InstrumentoId = 6
                     });
                 }
                 context.SaveChanges();

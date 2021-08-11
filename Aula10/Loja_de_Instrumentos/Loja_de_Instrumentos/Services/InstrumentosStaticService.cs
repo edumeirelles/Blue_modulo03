@@ -15,6 +15,7 @@ namespace Loja_de_Instrumentos.Services
             instruments.Add(new Instrumento()
             {
                 Id = 1,
+                Type = "Guitarra",
                 Brand = "Fender",
                 Model = "Stratocaster",
                 Description = "A Fender Stratocaster é um modelo de guitarra elétrica desenhada por Leo Fender, " +
@@ -25,6 +26,7 @@ namespace Loja_de_Instrumentos.Services
             instruments.Add(new Instrumento()
             {
                 Id = 2,
+                Type = "Guitarra",
                 Brand = "Gibson",
                 Model = "SG",
                 Description = "Gibson SG é um dos mais conhecidos modelo de guitarra " +
@@ -35,6 +37,7 @@ namespace Loja_de_Instrumentos.Services
             instruments.Add(new Instrumento()
             {
                 Id = 3,
+                Type = "Violão",
                 Brand = "Martin",
                 Model = "DJR2E",
                 Description = "A C.F. Martin & Company é uma fabricante de violões dos Estados Unidos, estabelecida" +
@@ -45,6 +48,7 @@ namespace Loja_de_Instrumentos.Services
             instruments.Add(new Instrumento()
             {
                 Id = 4,
+                Type = "Violão",
                 Brand = "Epiphone",
                 Model = "DR-100",
                 Description = "The DR-100 features chrome hardware, a 25.5' scale, 1.68' nut width, set mahogany neck with dot inlays, mahogany body and select spruce top.",
@@ -54,6 +58,7 @@ namespace Loja_de_Instrumentos.Services
             instruments.Add(new Instrumento()
             {
                 Id = 5,
+                Type = "Guitarra",
                 Brand = "Gibson",
                 Model = "Les Paul",
                 Description = "Gibson Les Paul é uma guitarra de corpo sólido que começou a ser vendida em 1952.",
@@ -63,6 +68,7 @@ namespace Loja_de_Instrumentos.Services
             instruments.Add(new Instrumento()
             {
                 Id = 6,
+                Type = "Bateria",
                 Brand = "Pearl",
                 Model = "EXPORT EXX725S",
                 Description = "As lendas de amanhã tocam com a Pearl Export hoje. A Export Series agora incorpora a tecnologia de suspensão Pearl's S.S.T., montagem de tom Opti-Loc e acabamento Grindstone Sparkle.",
@@ -110,25 +116,17 @@ namespace Loja_de_Instrumentos.Services
         }
         public Instrumento Get(int id)
         {
-            return GetInstruments().FirstOrDefault(x => x.Id == id);
+            return new();
         }
         public bool Create(Instrumento instrumento)
         {
-            List<Instrumento> instrumentos = GetInstruments();
-            instrumento.Id = instrumentos.Last().Id + 1;
-
-            try
-            {
-                instrumentos.Add(instrumento);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+    
+            return false;
+            
         }
         public bool Update(Instrumento instrumento)
         {
+            
             return false;
         }
         public bool Delete(int? id)
