@@ -8,10 +8,10 @@
 
 <div class="row">
 
-    @foreach (Categoria categoria in Model.GroupBy(x=> x.InstrumentoCategoria).Select(x=> x.First()).ToList())
+    @foreach (Categoria categoria in Model.GroupBy(x=> x.InstrumentoCategoria).Select(x=> x.First()).OrderBy(x=> x.InstrumentoCategoria).ToList())
     {
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            
             <div class="card-body">
                 <h5 class="card-title">@Html.DisplayFor(Model => categoria.InstrumentoCategoria)</h5>
                 

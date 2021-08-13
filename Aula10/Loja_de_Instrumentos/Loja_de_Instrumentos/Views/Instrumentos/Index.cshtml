@@ -16,32 +16,27 @@
     </div>
 </form>
 
-@if (ViewBag.msg != null)
-{
-    <div class="alert alert-success" role="alert">
-        @ViewBag.msg
-    </div>
-}
 @if (!ViewBag.order)
-    {
-     <a class="btn btn-primary" href="?order=true">Ordenar por Modelo</a>
-    }
-    else
-    { <a class="btn btn-primary" asp-controller="Instrumentos" asp-action="Index">Retornar Ordenação Original</a>}
-    <br /><br />
+{
+    <a class="btn btn-primary" href="?order=true">Ordenar por Modelo</a>
+}
+else
+{ <a class="btn btn-primary" asp-controller="Instrumentos" asp-action="Index">Retornar Ordenação Original</a>}
+<br />
+<br />
+@foreach (Instrumento tipo in ViewBag.type)
+{
+<a class="btn btn-primary" href="?type=@(tipo.Type)">@tipo.Type</a>
+}
 
-<a class="btn btn-primary" href="?type=Guitarra">Guitarras</a>
-<a class="btn btn-primary" href="?type=Violão">Violões</a>
-<a class="btn btn-primary" href="?type=Bateria">Baterias</a>
-<a class="btn btn-primary" href="?type=Saxofone">Saxofones</a>
-<br /><br />
-
+<br />
+<br />
 
 <div class="row">
 
     @foreach (Instrumento instrument in Model)
     {
-        <div class="card col-md-4 col-sm-5 clearfix " >
+        <div class="card col-md-4 col-sm-5 clearfix ">
             <img src="@Html.DisplayFor(Model => instrument.Link)" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">@Html.DisplayFor(Model => instrument.Brand) @Html.DisplayFor(Model => instrument.Model)</h5>
@@ -67,7 +62,7 @@
         </div>
     }
 </div>
-
-    <p>Total de Instrumentos cadastrados: @ViewBag.total</p>
-    <p>Instrumento mais caro: @ViewBag.maxprice</p>
-    <p>Valor de todos os instrumentos somados: R$ @ViewBag.sum</p>
+<br /><br />
+<p>Total de Instrumentos cadastrados: @ViewBag.total</p>
+<p>Instrumento mais caro: @ViewBag.maxprice</p>
+<p>Valor de todos os instrumentos somados: R$ @ViewBag.sum</p>

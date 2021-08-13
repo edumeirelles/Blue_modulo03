@@ -3,9 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Loja_de_Instrumentos.Data
 {
@@ -15,6 +13,8 @@ namespace Loja_de_Instrumentos.Data
         {
             using (var scope = app.Services.CreateScope())
             {
+                Random rdn = new();
+
                 var serviceProvider = scope.ServiceProvider;
                 var context = serviceProvider.GetRequiredService<LojaDeInstrumentosContext>();
                 context.Database.Migrate();
@@ -77,41 +77,44 @@ namespace Loja_de_Instrumentos.Data
                         Price = 5199.99,
                         Link = "https://x5music.vteximg.com.br/arquivos/ids/170212-1920-1920/EXX725S-708.jpg"
                     });
+                    context.SaveChanges();
                 }
                 if (!context.Categoria.Any())
                 {
+                    var instrumentos = context.Instrumento.ToList();
                     context.Categoria.Add(new Categoria()
                     {
                         InstrumentoCategoria = "Cordas",
-                        InstrumentoId = 1
-                    });
-                    context.Categoria.Add(new Categoria()
-                    {
-                        InstrumentoCategoria = "Cordas",
-                        InstrumentoId = 2
+                        InstrumentoId = instrumentos[0].Id
                     });
                     context.Categoria.Add(new Categoria()
                     {
                         InstrumentoCategoria = "Cordas",
-                        InstrumentoId = 3
+                        InstrumentoId = instrumentos[1].Id
                     });
                     context.Categoria.Add(new Categoria()
                     {
                         InstrumentoCategoria = "Cordas",
-                        InstrumentoId = 4
+                        InstrumentoId = instrumentos[2].Id
                     });
                     context.Categoria.Add(new Categoria()
                     {
                         InstrumentoCategoria = "Cordas",
-                        InstrumentoId = 5
+                        InstrumentoId = instrumentos[3].Id
                     });
                     context.Categoria.Add(new Categoria()
                     {
-                        InstrumentoCategoria = "Bateria",
-                        InstrumentoId = 6
+                        InstrumentoCategoria = "Cordas",
+                        InstrumentoId = instrumentos[4].Id
                     });
+                    context.Categoria.Add(new Categoria()
+                    {
+                        InstrumentoCategoria = "Percussão",
+                        InstrumentoId = instrumentos[5].Id
+                    });
+                    context.SaveChanges();
                 }
-                context.SaveChanges();
+                
 
             }
         }

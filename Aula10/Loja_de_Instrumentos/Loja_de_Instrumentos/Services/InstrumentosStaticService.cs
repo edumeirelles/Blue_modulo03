@@ -1,8 +1,6 @@
 ﻿using Loja_de_Instrumentos.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Loja_de_Instrumentos.Services
 {
@@ -78,25 +76,14 @@ namespace Loja_de_Instrumentos.Services
             return instruments;
 
         }
-        public List<Instrumento> GetAll(string search, string type, bool order = false)
+        public List<Instrumento> GetAll(string search = null, string type = null, bool order = false)
         {
             List<Instrumento> Instrumentos()
             {
-                if (type == "guitarra")
-                {
-                    var guitarra = GetInstruments().FindAll(x => x.Type == type);
-                    return guitarra;
-                }
-                else if (type == "violao")
-                {
-                    var violao = GetInstruments().FindAll(x => x.Type == type);
-                    return violao;
-                }
-                else if (type == "bateria")
-                {
-                    var bateria = GetInstruments().FindAll(x => x.Type == type);
-                    return bateria;
-                }
+                var types = GetInstruments().FindAll(x => x.Type == type);
+
+                if (type != null)
+                    return types;
                 else
                 {
                     var instrumentos = GetInstruments();
@@ -120,13 +107,10 @@ namespace Loja_de_Instrumentos.Services
         }
         public bool Create(Instrumento instrumento)
         {
-    
-            return false;
-            
+            return false;            
         }
         public bool Update(Instrumento instrumento)
-        {
-            
+        {           
             return false;
         }
         public bool Delete(int? id)

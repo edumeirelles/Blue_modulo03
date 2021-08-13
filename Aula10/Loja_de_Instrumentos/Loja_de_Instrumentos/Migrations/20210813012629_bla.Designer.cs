@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Loja_de_Instrumentos.Migrations
 {
     [DbContext(typeof(LojaDeInstrumentosContext))]
-    [Migration("20210809232620_instrumentos")]
-    partial class instrumentos
+    [Migration("20210813012629_bla")]
+    partial class bla
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -81,7 +81,7 @@ namespace Loja_de_Instrumentos.Migrations
             modelBuilder.Entity("Loja_de_Instrumentos.Models.Categoria", b =>
                 {
                     b.HasOne("Loja_de_Instrumentos.Models.Instrumento", "Instrumento")
-                        .WithMany("Cordas")
+                        .WithMany("Categoria")
                         .HasForeignKey("InstrumentoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -91,7 +91,7 @@ namespace Loja_de_Instrumentos.Migrations
 
             modelBuilder.Entity("Loja_de_Instrumentos.Models.Instrumento", b =>
                 {
-                    b.Navigation("Cordas");
+                    b.Navigation("Categoria");
                 });
 #pragma warning restore 612, 618
         }

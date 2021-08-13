@@ -79,7 +79,7 @@ namespace Loja_de_Instrumentos.Migrations
             modelBuilder.Entity("Loja_de_Instrumentos.Models.Categoria", b =>
                 {
                     b.HasOne("Loja_de_Instrumentos.Models.Instrumento", "Instrumento")
-                        .WithMany("Cordas")
+                        .WithMany("Categoria")
                         .HasForeignKey("InstrumentoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -89,7 +89,7 @@ namespace Loja_de_Instrumentos.Migrations
 
             modelBuilder.Entity("Loja_de_Instrumentos.Models.Instrumento", b =>
                 {
-                    b.Navigation("Cordas");
+                    b.Navigation("Categoria");
                 });
 #pragma warning restore 612, 618
         }

@@ -2,7 +2,7 @@
 
 namespace Loja_de_Instrumentos.Migrations
 {
-    public partial class instrumentos : Migration
+    public partial class bla : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

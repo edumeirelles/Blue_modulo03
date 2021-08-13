@@ -2,9 +2,7 @@
 using Loja_de_Instrumentos.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Loja_de_Instrumentos.Controllers
 {
@@ -21,39 +19,36 @@ namespace Loja_de_Instrumentos.Controllers
 
         private void SelectService(string service = "sql")
         {
-            switch (service)
+            _service = service switch
             {
-                case "sql":
-                    _service =_sqlService;
-                    break;
-                case "static":
-                    _service = _staticService;
-                    break;
-                default:
-                    _service = _sqlService;
-                    break;
-            }
+                "sql" => _sqlService,
+                "static" => _staticService,
+                _ => _sqlService,
+            };
         }
-        private void SelectViewBag(string service, bool order = false)
+        private void SelectViewBag(string service, string type, bool order)
         {
             SelectService(service);
             if (service == "sql")
             {
                 ViewBag.source = "sql";
             }
+            ViewBag.type = _service.GetAll().GroupBy(x=> x.Type).Select(x=> x.First()).OrderBy(x => x.Type).ToList();
             ViewBag.order = order;
-            ViewBag.total = _service.GetAll().Count;
-            ViewBag.sum = _service.GetAll().Sum(x => x.Price);
-            ViewBag.maxprice = _service.GetAll().Find(x => x.Price == _service.GetAll().Max(x => x.Price)).Brand 
+            ViewBag.total = type != null ? _service.GetAll().FindAll(x => x.Type == type).Count : _service.GetAll().Count;
+            ViewBag.sum = type != null ? Math.Round((decimal)_service.GetAll().FindAll(x=> x.Type == type).Sum(x => x.Price), 2) : Math.Round((decimal)_service.GetAll().Sum(x => x.Price), 2);
+            ViewBag.maxprice = type != null ? 
+                
+                _service.GetAll().FindAll(x => x.Type == type).Find(x => x.Price == _service.GetAll().FindAll(x => x.Type == type).Max(x => x.Price)).Brand
+                + " " + _service.GetAll().FindAll(x => x.Type == type).Find(x => x.Price == _service.GetAll().FindAll(x => x.Type == type).Max(x => x.Price)).Model : 
+
+                _service.GetAll().Find(x => x.Price == _service.GetAll().Max(x => x.Price)).Brand 
                 + " " + _service.GetAll().Find(x => x.Price == _service.GetAll().Max(x => x.Price)).Model;
+            
         }
         public IActionResult Index(string search, string type, bool order = false, string service = "sql")
         {
-            
-
-            SelectViewBag(service, order);
-            
-     
+            SelectViewBag(service, type, order);
             return View(_service.GetAll(search, type, order)); 
         }
         [HttpGet]
